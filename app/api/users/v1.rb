@@ -27,6 +27,7 @@ class Users::Version1 < Users::Base
     desc 'Update user'
     put ':id' do
       @user.update_attributes!(params[:user])
+
       status 204
       ''
     end

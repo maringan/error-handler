@@ -12,7 +12,7 @@ describe ErrorReceiver::Version1 do
   describe 'POST /newrelic/webhook' do
     it 'should work' do
       post 'api/v1/newrelic/webhook', request_example
-      last_response.status.should == 201
+      last_response.status.should == 200
     end
   end
 end

@@ -3,6 +3,7 @@ require 'rack/test'
 ENV['RACK_ENV'] = 'test'
 require File.expand_path('../../config/application', __FILE__)
 require_relative 'factories/user_factory'
+require 'sucker_punch/testing/inline'
 
 RSpec.configure do |c|
   c.before(:each) do

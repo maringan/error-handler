@@ -12,6 +12,8 @@ Bundler.require :default, env
 Dir[File.expand_path('../../app/api/*/base.rb', __FILE__),
     File.expand_path('../../app/models/*.rb', __FILE__),
     File.expand_path('../../app/services/*.rb', __FILE__),
+    File.expand_path('../../lib/*.rb', __FILE__),
+    File.expand_path('../../app/workers/*.rb', __FILE__),
     File.expand_path('../../app/api/*/v*.rb', __FILE__)
     ].each do |f|
   require f

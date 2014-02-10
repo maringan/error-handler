@@ -6,6 +6,8 @@ gem 'grape-swagger'
 gem 'activerecord', '~>3.2.15', require: 'active_record'
 gem 'rake'
 gem 'racksh'
+gem 'api_smith'
+gem 'sucker_punch'
 
 group :development, :test do
   gem 'sqlite3'
@@ -18,6 +20,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'webmock'
 end
 
 group :production do
