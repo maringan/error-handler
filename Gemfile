@@ -9,6 +9,7 @@ gem 'rake'
 gem 'racksh'
 gem 'api_smith'
 gem 'sucker_punch'
+gem 'rspec'
 
 group :development, :test do
   gem 'sqlite3'
@@ -16,7 +17,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec'
   gem 'rack-test', require: 'rack/test'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
