@@ -29,7 +29,7 @@ describe Users::Version1 do
       it 'should not create user' do
         post 'api/v1/users'
 
-        last_response.body.should == {iden: ["can't be blank"], email: ["can't be blank"]}.to_json
+        last_response.body.should == {email: ["can't be blank"]}.to_json
         last_response.status.should == 422
       end
     end

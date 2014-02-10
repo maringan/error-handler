@@ -3,6 +3,7 @@ class Users::Version1 < Users::Base
 
   resources :users do
     before do
+      authenticate!
       @user = User.find(params[:id]) if params[:id]
     end
 
