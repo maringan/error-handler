@@ -3,6 +3,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'rubygems'
 require 'bundler/setup'
+require_relative 'environment'
 
 Bundler.require :default, ENV['RACK_ENV']
 

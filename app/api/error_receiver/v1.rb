@@ -1,5 +1,7 @@
 class ErrorReceiver::Version1 < ErrorReceiver::Base
-  get '/' do
-    'tadam'
+  version 'v1', using: :path, format: :json
+
+  post '/newrelic/webhook' do
+
   end
 end
