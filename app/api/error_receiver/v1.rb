@@ -1,7 +1,9 @@
-class ErrorReceiver::Version1 < ErrorReceiver::Base
-  version 'v1', using: :path, format: :json
+module ErrorReceiver
+  class Version1 < ErrorReceiver::Base
+    version 'v1', using: :path, format: :json
 
-  post '/newrelic/webhook' do
+    post '/newrelic/webhook' do
 
+    end
   end
 end
