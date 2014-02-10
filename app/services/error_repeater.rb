@@ -1,5 +1,11 @@
 class ErrorRepeater
-  def initialize(error)
-    @error = error
+  def initialize(message)
+    @message = message
   end
+
+  def build_worker
+
+  end
+
+  private
 end

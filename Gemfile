@@ -1,18 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rack', '~> 1.5.2'
-gem 'grape', '~> 0.5.0'
+gem 'rack'
+gem 'grape'
 gem 'grape-swagger'
-gem 'activerecord', '~>3.2.13', require: 'active_record'
+gem 'activerecord', '~>3.2.15', require: 'active_record'
 gem 'rake'
-
-group :test do
-  gem 'rspec'
-end
+gem 'racksh'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test', require: 'rack/test'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'factory_girl'
 end
 
 group :production do

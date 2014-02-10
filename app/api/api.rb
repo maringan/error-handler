@@ -4,5 +4,6 @@ module App
     format :json
 
     mount ErrorReceiver::Version1
+    mount Users::Version1
   end
 end
