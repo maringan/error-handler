@@ -27,7 +27,7 @@ describe Users::Version1 do
 
     context 'Incorrect data' do
       it 'should not create user' do
-        post 'api/v1/users'
+        post 'api/v1/users', user: { email: '' }
 
         last_response.body.should == {email: ["can't be blank"]}.to_json
         last_response.status.should == 422

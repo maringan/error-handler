@@ -13,11 +13,17 @@ class Users::Version1 < Users::Base
     end
 
     desc 'Get user'
+    params do
+      requires :id, type: Integer, desc: 'User ID'
+    end
     get ':id' do
       User.find(params[:id])
     end
 
     desc 'Create user'
+    params do
+      requires :user, type: Hash, desc: 'User params'
+    end
     post do
       user = User.create!(params[:user])
 
@@ -26,6 +32,10 @@ class Users::Version1 < Users::Base
     end
 
     desc 'Update user'
+    params do
+      requires :id, type: Integer, desc: 'User ID'
+      requires :user, type: Hash, desc: 'User params'
+    end
     put ':id' do
       @user.update_attributes!(params[:user])
 
@@ -34,6 +44,9 @@ class Users::Version1 < Users::Base
     end
 
     desc 'destroy user'
+    params do
+      requires :id, type: Integer, desc: 'User ID'
+    end
     delete ':id' do
       @user.destroy
     end
